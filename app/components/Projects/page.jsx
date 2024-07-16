@@ -2,7 +2,7 @@
 import React from 'react'
 import ProjectsData from './projectdata'
 
-export const Projects = () => {
+const Projects = () => {
   return (
     <div className="p-4 mt-4">
       <h2 className="text-2xl font-bold mb-4 text-center">My Projects</h2>
@@ -23,3 +23,5 @@ export const Projects = () => {
     </div>
   )
 }
+
+export default Projects;
