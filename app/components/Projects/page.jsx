@@ -4,7 +4,7 @@ import ProjectsData from './projectdata'
 
 const Projects = () => {
   return (
-    <div className="p-4 mt-4">
+    <div className="p-4 mt-4  ">
       <h2 className="text-2xl font-bold mb-4 text-center">My Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {ProjectsData.map((item, index) => (
