@@ -1,4 +1,4 @@
-"use client"
+
 const ProjectsData=[
     {
   projectName:'Charity Foundation',
