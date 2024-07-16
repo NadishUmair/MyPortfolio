@@ -1,5 +1,6 @@
 import HeroSection from "./components/HeroSection/page";
-import { Projects } from "./components/Projects/page";
+import Projects from "./components/Projects/page";
+
 import Services from "./components/Services/page";
 
 
