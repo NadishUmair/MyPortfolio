@@ -8,7 +8,7 @@ export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <div className=' mt-4 md:flex flex-col justify-center w-full items-center z-20 fixed md:top-0 left-0 right-0 md:bg-transparent'>
+    <div className='mt-4 md:flex flex-col justify-center w-full items-center z-20 fixed md:top-0 left-0 md:bg-transparent'>
       <div className=' flex justify-end md:hidden'>
         <IoIosMenu 
           className='text-[rgb(97,210,180)] text-5xl hover:text-white' 
