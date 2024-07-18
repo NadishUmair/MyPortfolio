@@ -8,7 +8,7 @@ export default function Home() {
   return (
   <>
   <HeroSection/>
-  {/* <Services/> */}
+  <Services/>
   <Projects/>
   </>
   );
