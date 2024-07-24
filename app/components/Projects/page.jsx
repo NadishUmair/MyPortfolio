@@ -6,7 +6,7 @@ const Projects = () => {
   return (
     <div className="p-4 mt-4">
       <h2 className="text-2xl font-bold mb-4 text-center">My Projects</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {ProjectsData.map((item, index) => (
           <div key={index} className="relative group mb-6 shadow-lg rounded-lg overflow-hidden">
             <a href={item.projectLive} target="_blank" rel="noopener noreferrer">
