@@ -1,9 +1,25 @@
 
 import React from 'react'
 import ProjectsData from './projectdata'
-
+const metaData = {
+  title: "Nadish Umair Portfolio",
+  description: "Nadish Umair Full Stack Developer Portfolio Projects",
+  keywords: "nadish umair,projects, portfolio, web development, react, nextjs",
+  author: "Nadish Umair",
+ 
+};
 const Projects = () => {
   return (
+    <>
+    <Head>
+        <title>{metaData.title}</title>
+        <meta name="description" content={metaData.description} />
+        <meta name="keywords" content={metaData.keywords} />
+        <meta name="author" content={metaData.author} />
+        <meta property="og:title" content={metaData.title} />
+        
+      </Head>
+   
     <div className="p-4 mt-4">
       <h2 className="text-2xl font-bold mb-4 text-center">My Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -21,6 +37,7 @@ const Projects = () => {
         ))}
       </div>
     </div>
+    </>
   )
 }
 
