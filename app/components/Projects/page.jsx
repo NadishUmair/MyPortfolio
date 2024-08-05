@@ -1,6 +1,7 @@
 
 import React from 'react'
 import ProjectsData from './projectdata'
+import Head from 'next/head';
 const metaData = {
   title: "Nadish Umair Portfolio",
   description: "Nadish Umair Full Stack Developer Portfolio Projects",

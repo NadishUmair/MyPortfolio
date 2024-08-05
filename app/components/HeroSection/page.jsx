@@ -3,6 +3,7 @@ import React from 'react';
 import ParticlesComponent from '../particles';
 import Navbar from '../Navbar/page';
 import HeroMain from '../HeroMain/page';
+import Head from 'next/head';
 const metaData = {
   title: "Nadish Umair Portfolio",
   description: "Nadish Umair Full Stack Developer Portfolio Projects",
