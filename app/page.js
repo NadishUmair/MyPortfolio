@@ -2,9 +2,10 @@
 import React from "react";
 import HeroSection from "./components/HeroSection/page";
 import Projects from "./components/Projects/page";
-import Services from "./components/Services/page";
+
 import { motion, useScroll, useSpring } from "framer-motion";
 import Footer from "./components/Footer/page";
+import Skills from "./components/Skills/page";
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -34,7 +35,7 @@ export default function Home() {
       />
       <div style={{ marginTop: "5px" }}>
         <HeroSection />
-        <Services />
+        <Skills />
         <Projects />
         <Footer/>
       </div>
