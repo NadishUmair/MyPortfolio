@@ -1,4 +1,4 @@
-
+"use client"
 import React from 'react';
 import ParticlesComponent from '../particles';
 import Navbar from '../Navbar/page';
