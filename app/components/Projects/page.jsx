@@ -21,7 +21,7 @@ const Projects = () => {
         
       </Head>
    
-    <div className="p-4 mt-4z">
+    <div className="p-4 mt-20">
       <h2 className="text-2xl font-bold mb-4 text-center">My Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {ProjectsData.map((item, index) => (
