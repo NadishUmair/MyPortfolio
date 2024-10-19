@@ -1,44 +1,39 @@
-"use client"
-import React from "react";
-import HeroSection from "./components/HeroSection/page";
-import Projects from "./components/Projects/page";
+import { personalData } from "@/utils/data/personal-data";
+import AboutSection from "./components/homepage/about";
+import Blog from "./components/homepage/blog";
+import ContactSection from "./components/homepage/contact";
+import Education from "./components/homepage/education";
+import Experience from "./components/homepage/experience";
+import HeroSection from "./components/homepage/hero-section";
+import Projects from "./components/homepage/projects";
+import Skills from "./components/homepage/skills";
 
-import { motion, useScroll, useSpring } from "framer-motion";
-import Footer from "./components/Footer/page";
-import Skills from "./components/Skills/page";
+async function getData() {
+  const res = await fetch(`https://dev.to/api/articles?username=${personalData.devUsername}`)
 
-export default function Home() {
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
-  });
+  if (!res.ok) {
+    throw new Error('Failed to fetch data')
+  }
+
+  const data = await res.json();
+
+  const filtered = data.filter((item) => item?.cover_image).sort(() => Math.random() - 0.5);
+
+  return filtered;
+};
+
+export default async function Home() {
+  const blogs = await getData();
 
   return (
     <>
-      <motion.div
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          right: 0,
-          height: "5px",
-          backgroundColor: "#61D2B4",
-          scaleX,
-          transformOrigin: "0%",
-          zIndex: 10, 
-          transition: "all 0.3s ease-out" // Smooth transition for initial appearance
-        }}
-        initial={{ scaleX: 0 }} // Start with 0 width
-        animate={{ scaleX: scrollYProgress }} // Animate to scroll progress
-      />
-      <div style={{ marginTop: "5px" }}>
-        <HeroSection />
-        <Skills />
-        <Projects />
-        <Footer/>
-      </div>
+      <HeroSection />
+      <AboutSection />
+      <Experience />
+      <Skills />
+      <Projects />
+      <Education />
+      <ContactSection />
     </>
-  );
-}
+  )
+};
