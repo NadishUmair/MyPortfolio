@@ -13,8 +13,8 @@ export async function POST(request) {
   };
 
   try {
-    const url = `https://api.telegram.org/bot${token}/sendMessage`;
-    const message = `New message from ${payload.name}\n\nEmail: ${payload.email}\n\nMessage:\n ${payload.message}\n\n`;
+    // const url = `https://api.telegram.org/bot${token}/sendMessage`;
+    // const message = `New message from ${payload.name}\n\nEmail: ${payload.email}\n\nMessage:\n ${payload.message}\n\n`;
 
     const res = await axios.post(url, {
       text: message,
