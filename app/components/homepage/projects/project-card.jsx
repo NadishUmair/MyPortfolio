@@ -1,9 +1,12 @@
 // @flow strict
-
+"use client"
 import * as React from 'react';
 
 function ProjectCard({ project }) {
-
+  React.useEffect(()=>{
+    console.log("project",project.image);
+  },[])
+   
   return (
     <div className="from-[#0d1224] border-[#1b2c68a0] relative rounded-lg border bg-gradient-to-r to-[#0a0d37] w-full">
       <div className="flex flex-row">
@@ -20,8 +23,9 @@ function ProjectCard({ project }) {
           {project.name}
         </p>
       </div>
-      <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
-        <code className="font-mono text-xs md:text-sm lg:text-base">
+      <div className=" border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
+        <img src={project.image} className='w-full h-full rounded-md' alt="" />
+        {/* <code className="font-mono text-xs md:text-sm lg:text-base">
           <div className="blink">
             <span className="mr-2 text-pink-500">const</span>
             <span className="mr-2 text-white">project</span>
@@ -62,7 +66,7 @@ function ProjectCard({ project }) {
             <span className="text-gray-400">,</span>
           </div>
           <div><span className="text-gray-400">{`};`}</span></div>
-        </code>
+        </code> */}
       </div>
     </div>
   );
