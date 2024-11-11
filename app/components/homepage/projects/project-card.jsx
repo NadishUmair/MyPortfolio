@@ -1,5 +1,6 @@
 // @flow strict
 "use client"
+import Link from 'next/link';
 import * as React from 'react';
 
 function ProjectCard({ project }) {
@@ -13,17 +14,26 @@ function ProjectCard({ project }) {
         <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
         <div className="h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent"></div>
       </div>
-      <div className="px-4 lg:px-8 py-3 lg:py-5 relative">
-        <div className="flex flex-row space-x-1 lg:space-x-2 absolute top-1/2 -translate-y-1/2">
+      <div className="px-4 flex justify-between items-center lg:px-8 py-3 lg:py-5 relative">
+        <div className="flex flex-row space-x-1 lg:space-x-2  ">
           <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-red-400"></div>
           <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-orange-400"></div>
           <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-green-200"></div>
         </div>
-        <p className="text-center ml-3 text-[#16f2b3] text-base lg:text-xl">
+      <div className=''>
+      <p className="text-center ml-3 text-[#16f2b3] text-base lg:text-xl">
           {project.name}
         </p>
       </div>
-      <div className=" border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
+        <div className='flex'>
+        <Link href={project?.url} target="_blank" className="bg-gradient-to-r to-pink-500 from-violet-600 p-[1px] rounded-md transition-all duration-300 hover:from-pink-500 hover:to-violet-600">
+              <button className="px-3 text-xs md:px-6 py-2 md:py-3 bg-[#0a0d37] rounded-md border-none text-center md:text-sm font-medium uppercase tracking-wider text-[#ffff] no-underline transition-all duration-200 ease-out  md:font-semibold flex items-center gap-1 hover:gap-3">
+                <span>Demo</span>
+              </button>
+            </Link>
+        </div>
+      </div>
+      <div className="border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
         <img src={project.image} className='w-full h-full rounded-md' alt="" />
         {/* <code className="font-mono text-xs md:text-sm lg:text-base">
           <div className="blink">
