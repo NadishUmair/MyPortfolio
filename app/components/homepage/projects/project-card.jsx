@@ -1,5 +1,6 @@
 // @flow strict
 "use client"
+import Image from 'next/image';
 import Link from 'next/link';
 import * as React from 'react';
 
@@ -34,7 +35,13 @@ function ProjectCard({ project }) {
         </div>
       </div>
       <div className="border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
-        <img src={project.image} className='w-full h-full rounded-md' alt="" />
+      <Image
+        src={project.image}
+        alt="Project Image"
+        layout="fill"   // This makes the image fill the entire container
+        objectFit="cover" // Ensures the image covers the container area
+        className="rounded-md"
+      />
         {/* <code className="font-mono text-xs md:text-sm lg:text-base">
           <div className="blink">
             <span className="mr-2 text-pink-500">const</span>
