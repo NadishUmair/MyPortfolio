@@ -5,7 +5,7 @@ import * as React from 'react';
 
 function ProjectCard({ project }) {
   React.useEffect(()=>{
-    console.log("project",project.image);
+    console.log("project",project);
   },[])
    
   return (
@@ -15,7 +15,7 @@ function ProjectCard({ project }) {
         <div className="h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent"></div>
       </div>
       <div className="px-4 flex justify-between items-center lg:px-8 py-3 lg:py-5 relative">
-        <div className="flex flex-row space-x-1 lg:space-x-2  ">
+        <div className="flex flex-row space-x-1 lg:space-x-2">
           <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-red-400"></div>
           <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-orange-400"></div>
           <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-green-200"></div>
