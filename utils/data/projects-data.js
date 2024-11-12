@@ -42,14 +42,25 @@ export const projectsData = [
     {
         id: 4,
         name: 'Playnest',
-        description: "I developed the front-end of the Amazon main page using HTML, CSS, and Bootstrap, focusing on creating a responsive and visually appealing interface. The design replicates Amazon's layout, emphasizing user-friendly navigation, structured content display, and seamless responsiveness across devices. This project showcases my skills in front-end development, utilizing modern web design principles to enhance the user experience.",
+        description: "I developed the front-end of the Amazon main page using HTML, CSS, and Tailwind Css, focusing on creating a responsive and visually appealing interface. The design replicates Amazon's layout, emphasizing user-friendly navigation, structured content display, and seamless responsiveness across devices. This project showcases my skills in front-end development, utilizing modern web design principles to enhance the user experience.",
         tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
         code: '',
         demo: '',
         image: "/Assets/image/playnest.PNG",
         role: '',
         url:"https://playnestfrontend.vercel.app/"
-    }
+    },
+    {
+        id: 5,
+        name: 'Casa Vista',
+        description: "I developed the front-end of the Amazon main page using HTML, CSS, and Bootstrap, focusing on creating a responsive and visually appealing interface. The design replicates Amazon's layout, emphasizing user-friendly navigation, structured content display, and seamless responsiveness across devices. This project showcases my skills in front-end development, utilizing modern web design principles to enhance the user experience.",
+        tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
+        code: '',
+        demo: '',
+        image: "/Assets/image/casavista.PNG",
+        role: '',
+        url:"https://www.casavistaproperties.com/"
+    },
 ];
 
 
