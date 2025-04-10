@@ -63,17 +63,6 @@ export const projectsData = [
     },
     {
         id: 6,
-        name: 'Casa Vista',
-        description: "I developed the front-end of the Amazon main page using HTML, CSS, and Bootstrap, focusing on creating a responsive and visually appealing interface. The design replicates Amazon's layout, emphasizing user-friendly navigation, structured content display, and seamless responsiveness across devices. This project showcases my skills in front-end development, utilizing modern web design principles to enhance the user experience.",
-        tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
-        code: '',
-        demo: '',
-        image: "/Assets/image/casavista.PNG",
-        role: '',
-        url:"https://www.casavistaproperties.com/"
-    },
-    {
-        id: 7,
         name: 'Aurum House',
         description: "I developed the front-end of the Amazon main page using HTML, CSS, and Bootstrap, focusing on creating a responsive and visually appealing interface. The design replicates Amazon's layout, emphasizing user-friendly navigation, structured content display, and seamless responsiveness across devices. This project showcases my skills in front-end development, utilizing modern web design principles to enhance the user experience.",
         tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
