@@ -41,14 +41,14 @@ export const projectsData = [
     },
     {
         id: 4,
-        name: 'Playnest',
+        name: 'OBO MAX',
         description: "I developed the front-end of the Amazon main page using HTML, CSS, and Tailwind Css, focusing on creating a responsive and visually appealing interface. The design replicates Amazon's layout, emphasizing user-friendly navigation, structured content display, and seamless responsiveness across devices. This project showcases my skills in front-end development, utilizing modern web design principles to enhance the user experience.",
         tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
         code: '',
         demo: '',
-        image: "/Assets/image/playnest.PNG",
+        image: "/Assets/image/obomax.PNG",
         role: '',
-        url:"https://playnestfrontend.vercel.app/"
+        url:"https://www.obomax.com/"
     },
     {
         id: 5,
@@ -60,6 +60,28 @@ export const projectsData = [
         image: "/Assets/image/casavista.PNG",
         role: '',
         url:"https://www.casavistaproperties.com/"
+    },
+    {
+        id: 6,
+        name: 'Casa Vista',
+        description: "I developed the front-end of the Amazon main page using HTML, CSS, and Bootstrap, focusing on creating a responsive and visually appealing interface. The design replicates Amazon's layout, emphasizing user-friendly navigation, structured content display, and seamless responsiveness across devices. This project showcases my skills in front-end development, utilizing modern web design principles to enhance the user experience.",
+        tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
+        code: '',
+        demo: '',
+        image: "/Assets/image/casavista.PNG",
+        role: '',
+        url:"https://www.casavistaproperties.com/"
+    },
+    {
+        id: 7,
+        name: 'Aurum House',
+        description: "I developed the front-end of the Amazon main page using HTML, CSS, and Bootstrap, focusing on creating a responsive and visually appealing interface. The design replicates Amazon's layout, emphasizing user-friendly navigation, structured content display, and seamless responsiveness across devices. This project showcases my skills in front-end development, utilizing modern web design principles to enhance the user experience.",
+        tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
+        code: '',
+        demo: '',
+        image: "/Assets/image/orum.PNG",
+        role: '',
+        url:"https://orum-main.vercel.app/"
     },
 ];
 
