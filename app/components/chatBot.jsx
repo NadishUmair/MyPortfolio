@@ -2,20 +2,32 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaComments, FaTimes } from 'react-icons/fa'; // Added FaTimes
+import { FaComments, FaTimes } from 'react-icons/fa';
 
 const DEFAULT_BTN_CLS =
-  "fixed bottom-8 right-6 z-50 flex items-center rounded-full bg-gradient-to-r from-pink-500 to-violet-600 p-4 hover:text-xl transition-all duration-300 ease-out";
+  "fixed bottom-8 right-6 z-50 flex items-center rounded-full bg-gradient-to-r from-pink-500 to-violet-600 p-4 hover:scale-110 transition-all duration-300 ease-out";
+
+const tooltips = [
+  "Let's talk 🤖",
+  "Got questions?",
+  "Ask me anything 💬",
+  "Need help?",
+  "Let's chat 💡",
+];
 
 const ChatBot = () => {
-    const [btnCls, setBtnCls] = useState(DEFAULT_BTN_CLS);
+  const [btnCls, setBtnCls] = useState(DEFAULT_BTN_CLS);
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
     { role: 'assistant', content: 'Hi there! How can I assist you today?' },
   ]);
   const [input, setInput] = useState('');
+  const [isTyping, setIsTyping] = useState(false);
+  const [tooltipIndex, setTooltipIndex] = useState(0);
+
   const chatRef = useRef(null);
   const inputRef = useRef(null);
+  const scrollRef = useRef(null);
 
   const toggleChat = () => setIsOpen(prev => !prev);
 
@@ -36,12 +48,24 @@ const ChatBot = () => {
     };
   }, [isOpen]);
 
+  useEffect(() => {
+    scrollRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages, isTyping]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTooltipIndex((prev) => (prev + 1) % tooltips.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   const handleSend = async () => {
     if (!input.trim()) return;
 
     const userMessage = { role: 'user', content: input };
     setMessages(prev => [...prev, userMessage]);
     setInput('');
+    setIsTyping(true);
 
     try {
       const res = await fetch('/api/chat', {
@@ -55,12 +79,16 @@ const ChatBot = () => {
       const data = await res.json();
       const reply = data.reply;
 
-      setMessages(prev => [...prev, { role: 'assistant', content: reply }]);
+      setTimeout(() => {
+        setMessages(prev => [...prev, { role: 'assistant', content: reply }]);
+        setIsTyping(false);
+      }, 1000); // Simulate typing delay
     } catch (error) {
       setMessages(prev => [
         ...prev,
         { role: 'assistant', content: 'Sorry, something went wrong.' },
       ]);
+      setIsTyping(false);
     }
   };
 
@@ -70,14 +98,21 @@ const ChatBot = () => {
 
   return (
     <div className="fixed bottom-24 right-6 z-50">
-      {/* Toggle Button */}
-      <button
-        onClick={toggleChat}
-        className={btnCls}
-        aria-label="Toggle Chat"
-      >
-        {isOpen ? <FaTimes size={20} /> : <FaComments size={20} />}
-      </button>
+      {/* Tooltip & Toggle Button */}
+      <div className="relative group">
+        <button
+          onClick={toggleChat}
+          className={btnCls}
+          aria-label="Toggle Chat"
+        >
+          {isOpen ? <FaTimes size={20} /> : <FaComments size={20} />}
+        </button>
+        {!isOpen && (
+          <div className={`bottom-14 right-0 bg-violet-600 text-white text-xs px-2 py-1 rounded  group-hover:opacity-100 transition-all duration-300`}>
+            {tooltips[tooltipIndex]}
+          </div>
+        )}
+      </div>
 
       {/* Chat Box */}
       <AnimatePresence>
@@ -110,6 +145,12 @@ const ChatBot = () => {
                   {msg.content}
                 </div>
               ))}
+              {isTyping && (
+                <div className="bg-indigo-800/40 self-start text-white text-sm px-3 py-2 rounded-lg w-fit">
+                  <span className="dot-flashing"></span>
+                </div>
+              )}
+              <div ref={scrollRef}></div>
             </div>
 
             {/* Input */}
@@ -133,6 +174,32 @@ const ChatBot = () => {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Typing Animation CSS */}
+      <style jsx>{`
+        .dot-flashing {
+          display: inline-block;
+          position: relative;
+          width: 1em;
+          height: 1em;
+        }
+
+        .dot-flashing:after {
+          content: ' ';
+          display: block;
+          width: 0.6em;
+          height: 0.6em;
+          border-radius: 50%;
+          background: #16f2b3;
+          animation: dotFlashing 1s infinite linear alternate;
+        }
+
+        @keyframes dotFlashing {
+          0% { opacity: 0.2; }
+          50% { opacity: 1; }
+          100% { opacity: 0.2; }
+        }
+      `}</style>
     </div>
   );
 };
