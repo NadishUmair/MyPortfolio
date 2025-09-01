@@ -72,6 +72,18 @@ export const projectsData = [
         role: '',
         url:"https://orum-main.vercel.app/"
     },
+    {
+        id: 7,
+        name: 'Wed Booki',
+        description: "I developed the front-end of the Amazon main page using HTML, CSS, and Bootstrap, focusing on creating a responsive and visually appealing interface. The design replicates Amazon's layout, emphasizing user-friendly navigation, structured content display, and seamless responsiveness across devices. This project showcases my skills in front-end development, utilizing modern web design principles to enhance the user experience.",
+        tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
+        code: '',
+        demo: '',
+        image: "/Assets/image/wedbooki.PNG",
+        role: '',
+        url:"https://www.wedbooki.com/"
+    },
+
 ];
 
 
