@@ -9,8 +9,8 @@ export const experiences = [
   {
     id: 2,
     title: "MERN Stack Developer",
-    company: "Markedge (Pvt) ltd",
-     duration: "(Aug 2024 - Present)"
+    company: "Bhalli Software Solutions",
+     duration: "(Aug 2024 - Aug 2025)"
   },
  
 ]
