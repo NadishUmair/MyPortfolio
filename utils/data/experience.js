@@ -9,7 +9,7 @@ export const experiences = [
   {
     id: 2,
     title: "MERN Stack Developer",
-    company: "Bhalli Software Solutions",
+    company: "Acube Creative Factory",
      duration: "(Aug 2024 - Aug 2025)"
   },
  
