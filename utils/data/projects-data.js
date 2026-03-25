@@ -63,6 +63,105 @@ export const projectsData = [
     },
     {
         id: 6,
+        name: 'Ale Care Services',
+        description: "I developed the front-end of the Amazon main page using HTML, CSS, and Bootstrap, focusing on creating a responsive and visually appealing interface. The design replicates Amazon's layout, emphasizing user-friendly navigation, structured content display, and seamless responsiveness across devices. This project showcases my skills in front-end development, utilizing modern web design principles to enhance the user experience.",
+        tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
+        code: '',
+        demo: '',
+        image: "/Assets/image/alecareservices.PNG",
+        role: '',
+        url:"https://alecareservices.com/"
+    },
+    {
+        id: 7,
+        name: 'Al Ahad Cleaning Services LLC',
+        description: "I developed the front-end of the Amazon main page using HTML, CSS, and Bootstrap, focusing on creating a responsive and visually appealing interface. The design replicates Amazon's layout, emphasizing user-friendly navigation, structured content display, and seamless responsiveness across devices. This project showcases my skills in front-end development, utilizing modern web design principles to enhance the user experience.",
+        tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
+        code: '',
+        demo: '',
+        image: "/Assets/image/alahad.PNG",
+        role: '',
+        url:"https://alahad.ae/"
+    },
+    {
+        id: 8,
+        name: 'Dural Manzom',
+        description: "I developed the front-end of the Amazon main page using HTML, CSS, and Bootstrap, focusing on creating a responsive and visually appealing interface. The design replicates Amazon's layout, emphasizing user-friendly navigation, structured content display, and seamless responsiveness across devices. This project showcases my skills in front-end development, utilizing modern web design principles to enhance the user experience.",
+        tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
+        code: '',
+        demo: '',
+        image: "/Assets/image/duralmanzom.PNG",
+        role: '',
+        url:"https://duralmanzom.com/"
+    },
+    {
+        id: 9,
+        name: 'Comfort Zone',
+        description: "I developed the front-end of the Amazon main page using HTML, CSS, and Bootstrap, focusing on creating a responsive and visually appealing interface. The design replicates Amazon's layout, emphasizing user-friendly navigation, structured content display, and seamless responsiveness across devices. This project showcases my skills in front-end development, utilizing modern web design principles to enhance the user experience.",
+        tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
+        code: '',
+        demo: '',
+        image: "/Assets/image/comfortzone.PNG",
+        role: '',
+        url:"https://comfortzoneuae.com/"
+    },
+    {
+        id: 10,
+        name: 'Mafi Mushkil',
+        description: "I developed the front-end of the Amazon main page using HTML, CSS, and Bootstrap, focusing on creating a responsive and visually appealing interface. The design replicates Amazon's layout, emphasizing user-friendly navigation, structured content display, and seamless responsiveness across devices. This project showcases my skills in front-end development, utilizing modern web design principles to enhance the user experience.",
+        tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
+        code: '',
+        demo: '',
+        image: "/Assets/image/mafimushkil.PNG",
+        role: '',
+        url:"https://mmbcs.com/"
+    },
+    {
+        id: 11,
+        name: 'Miraj',
+        description: "I developed the front-end of the Amazon main page using HTML, CSS, and Bootstrap, focusing on creating a responsive and visually appealing interface. The design replicates Amazon's layout, emphasizing user-friendly navigation, structured content display, and seamless responsiveness across devices. This project showcases my skills in front-end development, utilizing modern web design principles to enhance the user experience.",
+        tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
+        code: '',
+        demo: '',
+        image: "/Assets/image/mirajsolutions.PNG",
+        role: '',
+        url:"https://mirajcare.com/"
+    },
+    {
+        id: 12,
+        name: 'SunStar Electro Mechanical',
+        description: "I developed the front-end of the Amazon main page using HTML, CSS, and Bootstrap, focusing on creating a responsive and visually appealing interface. The design replicates Amazon's layout, emphasizing user-friendly navigation, structured content display, and seamless responsiveness across devices. This project showcases my skills in front-end development, utilizing modern web design principles to enhance the user experience.",
+        tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
+        code: '',
+        demo: '',
+        image: "/Assets/image/sunstar.PNG",
+        role: '',
+        url:"https://sunstarem.com/"
+    },
+    {
+        id: 13,
+        name: 'Al Muqaddis',
+        description: "I developed the front-end of the Amazon main page using HTML, CSS, and Bootstrap, focusing on creating a responsive and visually appealing interface. The design replicates Amazon's layout, emphasizing user-friendly navigation, structured content display, and seamless responsiveness across devices. This project showcases my skills in front-end development, utilizing modern web design principles to enhance the user experience.",
+        tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
+        code: '',
+        demo: '',
+        image: "/Assets/image/almuqaddis.PNG",
+        role: '',
+        url:"https://almuqaddisagw.com/"
+    },
+    {
+        id: 14,
+        name: 'Pearl Residencia',
+        description: "I developed the front-end of the Amazon main page using HTML, CSS, and Bootstrap, focusing on creating a responsive and visually appealing interface. The design replicates Amazon's layout, emphasizing user-friendly navigation, structured content display, and seamless responsiveness across devices. This project showcases my skills in front-end development, utilizing modern web design principles to enhance the user experience.",
+        tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
+        code: '',
+        demo: '',
+        image: "/Assets/image/pearlresidencia.PNG",
+        role: '',
+        url:"https://www.pearlresidencia.com.pk/"
+    },
+    {
+        id: 15,
         name: 'Aurum House',
         description: "I developed the front-end of the Amazon main page using HTML, CSS, and Bootstrap, focusing on creating a responsive and visually appealing interface. The design replicates Amazon's layout, emphasizing user-friendly navigation, structured content display, and seamless responsiveness across devices. This project showcases my skills in front-end development, utilizing modern web design principles to enhance the user experience.",
         tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
@@ -73,7 +172,7 @@ export const projectsData = [
         url:"https://orum-main.vercel.app/"
     },
     {
-        id: 7,
+        id: 16,
         name: 'Wed Booki',
         description: "I developed the front-end of the Amazon main page using HTML, CSS, and Bootstrap, focusing on creating a responsive and visually appealing interface. The design replicates Amazon's layout, emphasizing user-friendly navigation, structured content display, and seamless responsiveness across devices. This project showcases my skills in front-end development, utilizing modern web design principles to enhance the user experience.",
         tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
