@@ -29,7 +29,7 @@ export default async function Home() {
     <>
       <HeroSection />
       <AboutSection />
-       <Projects />
+      <Projects />
       <Experience />
       <Skills />
       <Education />
